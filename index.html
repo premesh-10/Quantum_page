@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuantumSim | The Future of Simulation</title>
+  <meta name="description" content="Next-gen interactive quantum circuit simulator.">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Ambient FX -->
+  <div class="ambient-light"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <div class="brand-dot"></div> QuantumSim
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link">Capabilities</a></li>
+        <li><a href="#showcase" class="nav-link">Showcase</a></li>
+        <li><a href="#paper" class="nav-link">Research</a></li>
+        <li><a href="#team" class="nav-link">Team</a></li>
+      </ul>
+
+      <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="badge">v2.0 Now Live</div>
+        <h1>Simulate the <br> <span class="glow-text">Quantum Realm.</span></h1>
+        <p>
+          Experience real-time Bloch sphere visualization and multi-qubit entanglement in your browser. No setup. Pure
+          physics.
+        </p>
+        <div class="hero-actions">
+          <a href="#showcase" class="btn btn-primary">View Demo</a>
+          <a href="#paper" class="btn btn-secondary">Learn More</a>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat">
+            <h4>0ms</h4>
+            <span>Latency</span>
+          </div>
+          <div class="stat">
+            <h4>20-Qubit</h4>
+            <span>Support</span>
+          </div>
+          <div class="stat">
+            <h4>4K</h4>
+            <span>Export</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="visual-card">
+          <!-- Placeholder/Fallback built-in -->
+          <img src="Circuit.jpg" alt="Quantum Circuit Interface"
+            onerror="this.src='https://placehold.co/800x500/050510/3b82f6?text=Quantum+Interface&font=playfair';">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Capabilities (Bento Grid) -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Engineered for Performance</h2>
+        <p>A suite of powerful tools designed for researchers, students, and quantum enthusiasts.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Large Item -->
+        <div class="bento-card span-2">
+          <div class="icon-box"><i class="fas fa-cube"></i></div>
+          <h3>Interactive Bloch Sphere</h3>
+          <p>
+            Manipulate single-qubit states in a fully interactive 3D environment.
+            Visualize phase and amplitude changes in real-time as you adjust gate parameters.
+          </p>
+        </div>
+
+        <!-- Small Item -->
+        <div class="bento-card">
+          <div class="icon-box"><i class="fas fa-microchip"></i></div>
+          <h3>Circuit Composer</h3>
+          <p>Drag-and-drop gates to build complex quantum circuits instantly.</p>
+        </div>
+
+        <!-- Small Item -->
+        <div class="bento-card">
+          <div class="icon-box"><i class="fas fa-chart-bar"></i></div>
+          <h3>Density Matrices</h3>
+          <p>Analyze mixed states, reduced density matrices, and entanglement purity with heatmap visualizations.</p>
+        </div>
+
+        <!-- Large Item -->
+        <div class="bento-card span-2">
+          <div class="icon-box"><i class="fas fa-file-export"></i></div>
+          <h3>Publication Ready Exports</h3>
+          <p>
+            Generate high-resolution PNGs of your simulations.
+            Perfect for academic papers, presentations, and educational content.
+          </p>
+        </div>
+        <!-- Small Item -->
+        <div class="bento-card">
+          <div class="icon-box"><i class="fas fa-bolt"></i></div>
+          <h3>Instant Run</h3>
+          <p>WebAssembly-powered backend ensures native-like performance in any browser.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase (Cinematic Carousel) -->
+  <section id="showcase" class="section">
+    <div class="container">
+      <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+        <h2>Visual Showcase</h2>
+      </div>
+
+      <div class="cinematic-carousel">
+        <div class="slide-track" id="track">
+          <div class="slide">
+            <img src="BlochSpheres.jpg" alt="Bloch Sphere"
+              onerror="this.src='https://placehold.co/1200x600/101015/3b82f6?text=Bloch+Sphere+Visualization';">
+            <div class="slide-overlay">
+              <h3>Bloch Sphere Dynamics</h3>
+              <p>Real-time state rotation tracking.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="DensityMatrices.jpg" alt="Density Matrix"
+              onerror="this.src='https://placehold.co/1200x600/101015/8b5cf6?text=Density+Matrix+Heatmaps';">
+            <div class="slide-overlay">
+              <h3>Density Matrix Heatmaps</h3>
+              <p>Visualizing quantum entanglement and reduced density matrices.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="Probabilities.png" alt="Probabilities"
+              onerror="this.src='https://placehold.co/1200x600/101015/06b6d4?text=Measurement+Probability';">
+            <div class="slide-overlay">
+              <h3>Measurement Outcomes</h3>
+              <p>Explore results with our 3D interactive graph visualization.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-nav">
+          <div class="nav-btn prev"><i class="fas fa-arrow-left"></i></div>
+          <div class="nav-btn next"><i class="fas fa-arrow-right"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Paper -->
+  <section id="paper" class="section">
+    <div class="container">
+      <div class="paper-box">
+        <div>
+          <h2>The Research Underlying the Sim.</h2>
+          <p style="color: var(--text-secondary); margin-top: 1rem;">
+            <strong>Title:</strong> Quantum Circuit Simulator: An Interactive Platform for Real-Time Simulation,
+            Reduction, and Bloch Sphere Visualization of Quantum States
+          </p>
+          <div class="bibtex">
+            <div class="copy-hint">BibTeX</div>
+            @unpublished{your2025quantum,
+            title = {Quantum Circuit Simulator...},
+            author = {Premesh, Sailesh, Abhiram, Pranay, Charitardha, Chetana},
+            year = {2025},
+            note = {Preprint}
+            }
+          </div>
+        </div>
+        <div>
+          <a href="FINAL_QVH_PAPER.pdf" download="FINAL_QVH_PAPER.pdf" class="btn btn-primary"
+            style="width: 100%; justify-content: center;">
+            Download PDF
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Team</h2>
+      </div>
+      <div class="team-wrap">
+        <!-- Row 1: Researchers -->
+        <div class="member">
+          <div class="avatar-box">
+            <img src="Sailesh.jpg" alt="Sailesh"
+              onerror="this.src='https://ui-avatars.com/api/?name=Sailesh+B&background=0D8ABC&color=fff';">
+          </div>
+          <h4>Sailesh Bale</h4>
+          <div class="role">Lead Researcher</div>
+        </div>
+
+        <div class="member">
+          <div class="avatar-box">
+            <img src="placeholder.png" alt="Charitardha"
+              onerror="this.src='https://ui-avatars.com/api/?name=Charitardha+G&background=0D8ABC&color=fff';">
+          </div>
+          <h4>Charitardha Gottimukkala</h4>
+          <div class="role">Researcher</div>
+        </div>
+
+        <div class="member">
+          <div class="avatar-box">
+            <img src="placeholder.png" alt="Chetana"
+              onerror="this.src='https://ui-avatars.com/api/?name=Chetana+Y&background=0D8ABC&color=fff';">
+          </div>
+          <h4>Chetana Yalavarthipati</h4>
+          <div class="role">Researcher</div>
+        </div>
+
+        <!-- Row 2: Developers -->
+        <div class="member">
+          <div class="avatar-box">
+            <img src="Premesh.jpeg" alt="Premesh"
+              onerror="this.src='https://ui-avatars.com/api/?name=Premesh+Y&background=0D8ABC&color=fff';">
+          </div>
+          <h4>Premesh Yenduru</h4>
+          <div class="role">Developer</div>
+        </div>
+
+        <div class="member">
+          <div class="avatar-box">
+            <img src="Abhiram.jpg" alt="Abhiram"
+              onerror="this.src='https://ui-avatars.com/api/?name=Abhiram+Y&background=0D8ABC&color=fff';">
+          </div>
+          <h4>Abhiram Yemireddi</h4>
+          <div class="role">Developer</div>
+        </div>
+
+        <div class="member">
+          <div class="avatar-box">
+            <img src="Pranay.jpg" alt="Pranay"
+              onerror="this.src='https://ui-avatars.com/api/?name=Pranay+M&background=0D8ABC&color=fff';">
+          </div>
+          <h4>Pranay Meda</h4>
+          <div class="role">Developer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Footer -->
+  <footer class="contact-hero">
+    <div class="container">
+      <h2>Ready to collaborate?</h2>
+      <div class="social-grid">
+        <a href="mailto:balesailesh@gmail.com" class="social-item">balesailesh@gmail.com</a>
+
+      </div>
+      <p style="margin-top: 4rem; color: var(--text-tertiary); font-size: 0.9rem;">
+        &copy; <span id="year">2025</span> Quantum Circuit Simulator.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Update Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Navbar Scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      if (window.scrollY > 20) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    // Carousel Logic
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let index = 0;
+
+    function updateSlide() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      updateSlide();
+    });
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSlide();
+    });
+
+    // Auto play
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      updateSlide();
+    }, 5000);
+
+    // Mobile Menu
+    const toggle = document.querySelector('.mobile-toggle');
+    const links = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      // Simple toggle for demo - ideally toggle a class
+      const isFlex = links.style.display === 'flex';
+      links.style.display = isFlex ? 'none' : 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '80px';
+      links.style.left = '0';
+      links.style.width = '100%';
+      links.style.background = '#0a0a0c';
+      links.style.padding = '2rem';
+    });
+
+  </script>
+</body>
+
+</html>
